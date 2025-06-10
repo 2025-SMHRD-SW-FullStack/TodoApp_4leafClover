@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import Update from './Update';
 
 const Todo = () => {
 
@@ -13,7 +14,10 @@ const Todo = () => {
         // setTodos(todos);
         setTodos(todos.concat(todo))
         console.log(todos);
-        
+    }
+
+    const update = () => {
+        <input type='text' ref={inputRef}/>
     }
 
     return (
@@ -27,7 +31,7 @@ const Todo = () => {
             </div>
             <div>
                 {todos.map((item,index)=>(
-                    <p key={index}>{index+1}.{item}</p>
+                    <p key={index}>{index+1}.{item}<button onClick={update}>내용 수정하기</button></p>
                 ))}
             </div>
         </div>
