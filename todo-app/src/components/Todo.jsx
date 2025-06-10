@@ -32,7 +32,7 @@ const Todo = () => {
                 </form>
             </div>
             {todos.map((item, index) => (
-                <div>
+                <div className='todo '>
                     <p key={index}>
                         {index + 1}. <input type='checkbox' /> {item}</p>
                     <Delete index={index} todos={todos} setTodos={setTodos} />
