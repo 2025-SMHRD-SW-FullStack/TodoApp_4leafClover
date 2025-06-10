@@ -3,6 +3,7 @@ import Delete from './Delete';
 import BottomMove from './BottomMove';
 import TopMove from './TopMove';
 import Update from './Update';
+import CheckBox from './CheckBox'
 
 const Todo = () => {
 
@@ -34,7 +35,7 @@ const Todo = () => {
             {todos.map((item, index) => (
                 <div className='todo '>
                     <p key={index}>
-                        {index + 1}. <input type='checkbox' /> {item}</p>
+                        {index + 1}. <CheckBox todos={todos} index={index} setTodos={setTodos}/> {item}</p>
                     <Delete index={index} todos={todos} setTodos={setTodos} />
                     <Update index={index} todos={todos} setTodos={setTodos}  />
                     <BottomMove index={index} todos={todos} setTodos={setTodos} />
