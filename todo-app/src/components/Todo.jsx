@@ -27,16 +27,15 @@ const Todo = () => {
                     <input type="submit" name="" id="" value="등록" onClick={addTodo} />
                 </form>
             </div>
-            <div>
-                {todos.map((item, index) => (
-                    <p key={index}>  {index + 1}. <input type='checkbox' />{item}
-                        <button>삭제</button>
-                        <button>내용 수정하기</button>
-                        <BottomMove index={index} todos={todos} setTodos={setTodos} />
-                        <TopMove index={index} todos={todos} setTodos={setTodos} />
-                    </p>
-                ))}
-            </div>
+            {todos.map((item, index) => (
+                <div>
+                    <p key={index}>  {index + 1}. <input type='checkbox' />{item}</p>
+                    <button>삭제</button>
+                    <button>내용 수정하기</button>
+                    <BottomMove index={index} todos={todos} setTodos={setTodos} />
+                    <TopMove index={index} todos={todos} setTodos={setTodos} />
+                </div>
+            ))}
         </div>
     )
 }
