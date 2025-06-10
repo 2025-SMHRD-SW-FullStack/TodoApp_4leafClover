@@ -27,7 +27,7 @@ const Todo = () => {
             </div>
             <div>
                 {todos.map((item,index)=>(
-                    <p key={index}>{index+1}.{item}</p>
+                    <p key={index}>  {index+1}. <input type='checkbox'/>{item}<button>삭제</button><button>내용 수정하기</button><button>맨 맽으로</button><button>맨 위로</button></p>
                 ))}
             </div>
         </div>
