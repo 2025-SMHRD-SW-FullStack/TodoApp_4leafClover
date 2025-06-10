@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import BottomMove from './BottomMove';
 import TopMove from './TopMove';
+import Update from './Update';
 
 const Todo = () => {
 
@@ -14,7 +15,6 @@ const Todo = () => {
         // todos.push(todo);
         // setTodos(todos);
         setTodos(todos.concat(todo))
-        console.log(todos);
     }
 
     return (
@@ -30,7 +30,7 @@ const Todo = () => {
                 {todos.map((item, index) => (
                     <p key={index}>  {index + 1}. <input type='checkbox' />{item}
                         <button>삭제</button>
-                        <button>내용 수정하기</button>
+                        <Update index={index} todos={todos} setTodos={setTodos}/>
                         <BottomMove index={index} todos={todos} setTodos={setTodos} />
                         <TopMove index={index} todos={todos} setTodos={setTodos} />
                     </p>
