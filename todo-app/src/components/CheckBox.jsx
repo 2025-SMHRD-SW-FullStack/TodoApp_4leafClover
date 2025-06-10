@@ -18,7 +18,7 @@ const CheckBox = ({todos, index, setTodos}) => {
                 setTodos(newList);
                 
                 
-                
+                 
             }else{
                 let newList= todos.map((item,idx)=>
                     {   if(idx==index){
