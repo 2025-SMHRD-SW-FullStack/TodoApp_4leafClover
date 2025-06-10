@@ -3,6 +3,7 @@ import Delete from './Delete';
 import BottomMove from './BottomMove';
 import TopMove from './TopMove';
 import Update from './Update';
+import CheckBox from './CheckBox'
 
 const Todo = () => {
 
